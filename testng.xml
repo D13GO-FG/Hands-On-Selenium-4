@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test_suite" parallel="none" thread-count="3">
+    <listeners>
+        <listener class-name="utilities.TestListener"/>
+    </listeners>
+    <test name="Fundamentals WebDriver">
+        <parameter name="browser" value="edge"/>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="SmokeTest"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <classes>
+            <class name="testCases.WebDriverFundamentals.TC_WebForm_001"/>
+        </classes>
+    </test>
+</suite>

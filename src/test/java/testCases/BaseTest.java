@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import utilities.TestListener;
 
 import java.time.Duration;
@@ -20,6 +21,7 @@ public class BaseTest {
     }
 
     @BeforeClass(alwaysRun = true, description = "Running setup driver")
+    @Parameters("browser")
     public void setUp(String browser){
         switch (browser){
             case "firefox" -> {
