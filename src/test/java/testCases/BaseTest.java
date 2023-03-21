@@ -1,5 +1,6 @@
 package testCases;
 
+import actions.AssertActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -15,6 +16,7 @@ import java.time.Duration;
 @Listeners(TestListener.class)
 public class BaseTest {
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+    protected AssertActions assertActions = new AssertActions();
 
     public WebDriver getDriver(){
         return driver.get();

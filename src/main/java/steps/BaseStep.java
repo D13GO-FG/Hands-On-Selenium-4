@@ -37,4 +37,12 @@ public class BaseStep {
     public void click(WebElement element){
         waitForDisplayed(element, SMALL_WAIT).click();
     }
+
+    public String readText(WebElement element){
+        return waitForDisplayed(element, SMALL_WAIT).getText();
+    }
+
+    public String readAttribute(WebElement element, String attribute){
+        return waitForDisplayed(element, SMALL_WAIT).getAttribute(attribute);
+    }
 }
